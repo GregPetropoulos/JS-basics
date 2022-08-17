@@ -39,6 +39,7 @@ li {
   border-color: chartreuse;
   border-width: medium;
   text-align: center;
+  border: 2px solid whitesmoke;
 }
 .center2-parent-flex {
   display: flex;
@@ -57,19 +58,30 @@ li {
   width: 50%;
   margin-top: 10px;
   background-color: darkcyan;
+  border: 2px solid whitesmoke;
 }
 .center3-parent-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
-    height: 250px;
-    width: 250px;
-    background-color: rgb(150, 52, 52);
-    border-color: blue;
-  }
-  .center3-child-grid {
-    text-align: center;
-    margin-top: 10px;
-    background-color: darkcyan;
-  }
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+  background-color: rgb(150, 52, 52);
+}
+.center3-child-grid {
+  text-align: center;
+  margin-top: 10px;
+  background-color: darkcyan;
+  border: 2px solid whitesmoke;
+}
+
+/* BOX MODEL */
+.box-model {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(150, 52, 52);
+  border: 2px solid whitesmoke;
+}

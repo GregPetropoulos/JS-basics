@@ -1,42 +1,38 @@
-// Round 1
+// JAVASCRIPT
 // 1 - map vs forEach
 // 2 - null vs undefined
 // 3 - Event Deligation
 // 4 - Array.flat implementation
-// Round 2
 // 5 - var vs let vs const
 // 6 - 2 - setTimeout Based Output
 // 7 - call, bind and apply
 // 8 - Infinite Currying
 // 9 - Compose Polyfill
 // 10 - Implement Promise.all()
-// WHAT ARE BUILT IN JS DATA STRUCTURES
-// Round 3
-// PROPS VS STATE
-// WHAT IS JSX
-// WHY DOES JSX RUN IN THE BROWSER
-// RECONILLIATION
-// COMMON HOOKS
-// 11 - React Lifecycle methods
-// 12 - Ways to center a div
-// 13 - CSS Box Model
-// 14 - Implement Debounce
+// 11 - Built in JS data structures
+
+// REACT
+// 12 - PROPS VS STATE
+// 13 - WHAT IS JSX
+// 14 - WHY DOES JSX RUN IN THE BROWSER
+// 15 - React Lifecycle methods
+// 16 - Implement Debounce
+// 17 - RECONILLIATION
+// 18 - COMMON HOOKS
+
 // CSS
-// BOX MODEL
-// FLEXBOX
-// ANIMATION
-// CHANGES FROM CSS3 TO CSS2
+// 19 - Ways to center a div
+// 20 - CSS Box Model
+// 21 - ANIMATION
+// 22 - CHANGES FROM CSS3 TO CSS2
 
 // HTML
-// CHANGES FROM HTML4 TO HTML5
-// WHAT IS CDN
-// DESCRIBE ASYNC/DEFER
-
-// Round 4
+// 23 - CHANGES FROM HTML4 TO HTML5
+// 24 - WHAT IS CDN
+// 25 - DESCRIBE ASYNC/DEFER
 
 // * -----------------------------------------------------------
-
-// * ROUND2
+//* JAVASCRIPT
 //* 1 - map vs forEach
 const arr = [2, 4, 5, 6, 7, 8, 9];
 const mapResult = arr.map((ar) => {
@@ -60,28 +56,28 @@ const forEachResult = arr.forEach((ar, idx) => {
 
 //undefined is a variable that refers to something that doesn't exist, and the variable isn't defined to be anything.
 
-//* EXAMPLE 1:
+//* Example 1:
 // let a;
 // console.log(a)
 
-//* EXAMPLE 2:
+//* Example 2:
 //null is a variable that is defined but is missing a value.
 // let b=[]
 // console.log(b[3]==null)
 //true
 
-//* EXAMPLE 3:
+//* Example 3:
 // Not defined is non existent
 // console.log(c)
 //script.js:58 Uncaught ReferenceError: c is not defined
 
-//* TYPES
+//* Types
 // console.log(typeof(null))
 //object
 // console.log(typeof(undefined))
 //undefined
 
-//* EQAULITY OPERATOR
+//* Equaliity Operator
 // console.log(null==undefined)
 //true- compares without matching types
 
@@ -141,24 +137,23 @@ function customRecursionFlat(arr, depth = 1) {
 }
 // console.log(customRecursionFlat(arr3D,2));
 // * -----------------------------------------------------------
-// * ROUND2
 
 //* 5 - var vs let vs const
 
-// *VAR
+// *var
 // var is functional scope, global and can be reassigned/redeclared and reinitialized
 // var a = 1;
 // var a = 10;
 // a = 100;
 
-// *LET
+// *let
 // let is block scope can not be reassigned but can be reinitialized
 // let b = 2;
 // let b = 20;
 // b = 200;
 // Uncaught SyntaxError: Identifier 'b' has already been declared
 
-//* CONST
+//* const
 // const is block scope can not be reassigned or reinitialized. This callue should remain the same a never change
 // const c = 3;
 // const c=30
@@ -244,9 +239,18 @@ function myPromiseAll(promises) {
   });
 }
 // * -----------------------------------------------------------
+//* 11 - Built in JS data structures
+// * -----------------------------------------------------------
 
-//* REACT ROUND 3
-//* 11 - React Lifecycle methods
+//* REACT
+// 12 - PROPS VS STATE
+// 13 - WHAT IS JSX
+// 14 - WHY DOES JSX RUN IN THE BROWSER
+// 15 - React Lifecycle methods
+// 16 - Implement Debounce
+// 17 - RECONILLIATION
+// 18 - COMMON HOOKS
+//* 15 - React Lifecycle methods
 // class components vs functional components
 
 //* CLASS
@@ -290,22 +294,25 @@ function myPromiseAll(promises) {
 //   }, []);
 
 // * -----------------------------------------------------------
-// PROPS VS STATE
-// WHAT IS JSX
-// WHY DOES JSX RUN IN THE BROWSER
-// RECONILLIATION
-// COMMON HOOKS
+
+//* 16 - Implement Debounce
 // * -----------------------------------------------------------
 
-//* 12 - Ways to center a div
+//* CSS
+//* 19 - Ways to center a div
+//* see style sheet
+// * -----------------------------------------------------------
 
-// CSS
-// BOX MODEL
-// FLEXBOX
-// ANIMATION
-// CHANGES FROM CSS3 TO CSS2
+//* 20 - CSS Box Model
+//* see style sheet
+// * -----------------------------------------------------------
+// 21 - ANIMATION
+// * -----------------------------------------------------------
+// 22 - CHANGES FROM CSS3 TO CSS2
+// * -----------------------------------------------------------
 
+//* HTML
 // HTML
-// CHANGES FROM HTML4 TO HTML5
-// WHAT IS CDN
-// DESCRIBE ASYNC/DEFER
+// 23 - DESCRIBE ASYNC/DEFER
+// 24 - WHAT IS CDN
+// 25 - CHANGES FROM HTML4 TO HTML5
