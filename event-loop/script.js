@@ -1,4 +1,8 @@
+// Namaste
 // https://www.youtube.com/watch?v=8zKuNo4ay8E
+
+// Animation of event loop
+// https://dev.to/lydiahallie/series/3341
 
 //* JS is single threaded and has one call stack
 
