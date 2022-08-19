@@ -1,7 +1,7 @@
 // JAVASCRIPT
 // 1 - map vs forEach
 // 2 - null vs undefined
-// 3 - Event Deligation
+// 3 - Event Delegation
 // 4 - Array.flat implementation
 // 5 - var vs let vs const
 // 6 - 2 - setTimeout Based Output
@@ -17,7 +17,7 @@
 // 14 - WHY DOES JSX RUN IN THE BROWSER
 // 15 - React Lifecycle methods
 // 16 - Implement Debounce
-// 17 - RECONILLIATION
+// 17 - RECONILIATION
 // 18 - COMMON HOOKS
 
 // CSS
@@ -29,7 +29,8 @@
 // HTML
 // 23 - CHANGES FROM HTML4 TO HTML5
 // 24 - WHAT IS CDN
-// 25 - DESCRIBE ASYNC/DEFER
+// 25 - Describe Async and Defer process
+
 
 // * -----------------------------------------------------------
 //* JAVASCRIPT
@@ -206,8 +207,37 @@ var otherCoder = {
 // newFunctionBind('meatbags')
 //* -----------------------------------------------------------
 //* 8 - Infinite Currying
-//* 9 - Compose Polyfill
-// 24 min
+https://www.youtube.com/watch?v=vxggZffOqek
+function add(arg1) {
+  return function (moreThanOneArg) {
+    if(moreThanOneArg)return add(arg1+moreThanOneArg);
+    return arg1;
+  };
+}
+// console.log(add(5)());
+// console.log(add(5)(2)(4)(5)())
+//* -----------------------------------------------------------
+
+//* 9 - Compose and Pipe Polyfill
+// compose evaluates the arguments right to left
+// pipe evaluates the arguments left  to right
+const addFive = (a) => {
+  return a + 5;
+};
+const subtractTwo = (a) => {
+  return a - 2;
+};
+const multiplyFour = (a) => {
+  return a * 4;
+};
+const compose = (...functions) => {
+  return (args) => {
+    return functions.reduceRight((arg, fn) => fn(arg), args);
+  };
+};
+// Heres the compose function
+const evaluate = compose(addFive, subtractTwo, multiplyFour);
+// console.log(evaluate(1));
 //* -----------------------------------------------------------
 
 //* 10 - Implement Promise.all()
@@ -221,7 +251,7 @@ function showText(text, time) {
 }
 // This only works if all the promise succeed, if one fails in the array the whole promise is shot
 Promise.all([showText('hello', 1500), Promise.resolve('hi')]).then((value) => {
-//   console.log(value);
+  //   console.log(value);
 });
 
 // Handle if one promise fails in the array like this
@@ -240,6 +270,14 @@ function myPromiseAll(promises) {
 }
 // * -----------------------------------------------------------
 //* 11 - Built in JS data structures
+// Stack
+// Queue
+// Linked List
+// Set
+// Hash Table
+// Tree
+// Trie
+// Graph
 // * -----------------------------------------------------------
 
 //* REACT
@@ -250,6 +288,8 @@ function myPromiseAll(promises) {
 // 16 - Implement Debounce
 // 17 - RECONILLIATION
 // 18 - COMMON HOOKS
+//  React compiler?
+
 //* 15 - React Lifecycle methods
 // class components vs functional components
 
@@ -295,7 +335,26 @@ function myPromiseAll(promises) {
 
 // * -----------------------------------------------------------
 
-//* 16 - Implement Debounce
+//* 16 - Implement Debounce, search functionality
+const myDebounce = (callback, delay) => {
+  let timer;
+  return function (...args) {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  };
+};
+const handleChange = myDebounce((e) => {
+  // console.log(e.target.value);
+}, 1000);
+
+// in the return of the app.js will have an input passing the prop
+// return (
+//   <div className='App'>
+//     <input onChange={handleChange}/>
+//   </div>
+// )
 // * -----------------------------------------------------------
 
 //* CSS
@@ -306,13 +365,40 @@ function myPromiseAll(promises) {
 //* 20 - CSS Box Model
 //* see style sheet
 // * -----------------------------------------------------------
-// 21 - ANIMATION
+//*  21 - Animation
+//* @keyframes
+//* animation-name
+//* animation-duration
+//* animation-delay
+//* animation-iteration-count
+//* animation-direction
+//* animation-timing-function
+//* animation-fill-mode
+//* animation
 // * -----------------------------------------------------------
-// 22 - CHANGES FROM CSS3 TO CSS2
+//*  22 - Changes from CSS3 TO CSS2
+//*  new properties Angle units deg, grad, rad, and switch or Time units s and ms.
+//*  modules
+//*  Combinator
+//*  Supports border box
+//*  The CSS3 version supports more browsers than CSS2
+//*  new selectors and pseudo-elements and pseudo-categories.
 // * -----------------------------------------------------------
 
 //* HTML
-// HTML
-// 23 - DESCRIBE ASYNC/DEFER
-// 24 - WHAT IS CDN
-// 25 - CHANGES FROM HTML4 TO HTML5
+//* 23 - Describe Async and Defer process
+//* Async - means execute code when it is downloaded and do not block DOM construction during downloading process.
+//* Defer - means execute code after it's downloaded and browser finished DOM construction and rendering process.
+// * -----------------------------------------------------------
+
+//* 24 - What is a CDN
+//* A CDN (content delivery network), also called a content distribution network, is a group of geographically distributed and interconnected servers. They provide cached internet content from a network location closest to a user to speed up its delivery.
+// * -----------------------------------------------------------
+
+
+//*  25 - Big changes from HTML4 to HTML5
+//* - New semantic tags such as audio, canva, and video...etc
+//* - Multimedia support
+//* - Easier doctype <!DOCTYPE html>
+//* - html 5 has error handling and better formatting
+// * -----------------------------------------------------------

@@ -2,6 +2,18 @@
 * {
   box-sizing: border-box;
 }
+.image-container{
+  height:250px;
+  width:400px;
+}
+img{
+  /* height:250px; */
+  /* width:250px; */
+  height:100%;
+  width:100%;
+  background-size: cover;
+background-repeat: no-repeat;
+}
 /* Body centers the column at 100 vh and hide scrollbars */
 body {
   font-family: 'Roboto Flex', sans-serif;
